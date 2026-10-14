@@ -1,0 +1,17 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+@font-face{font-family:"Clash Display";font-weight:600;font-display:swap;src:url(/fonts/ClashDisplay-Semibold.woff2) format("woff2")}
+@font-face{font-family:"Clash Display";font-weight:700;font-display:swap;src:url(/fonts/ClashDisplay-Bold.woff2) format("woff2")}
+@font-face{font-family:Satoshi;font-weight:400;font-display:swap;src:url(/fonts/Satoshi-Regular.woff2) format("woff2")}
+@font-face{font-family:Satoshi;font-weight:500;font-display:swap;src:url(/fonts/Satoshi-Medium.woff2) format("woff2")}
+@font-face{font-family:Satoshi;font-weight:700;font-display:swap;src:url(/fonts/Satoshi-Bold.woff2) format("woff2")}
+@font-face{font-family:Satoshi;font-weight:900;font-display:swap;src:url(/fonts/Satoshi-Black.woff2) format("woff2")}
+@font-face{font-family:"JetBrains Mono";font-weight:100 800;font-display:swap;src:url(/fonts/JetBrainsMono-Variable.woff2) format("woff2")}
+html{scroll-behavior:smooth}
+body{@apply bg-bone text-ink font-sans antialiased}
+:focus-visible{outline:2px solid #0FA37F;outline-offset:2px}
+section{scroll-margin-top:6rem}
+@keyframes nudge{0%,60%,100%{transform:translateX(0)}80%{transform:translateX(4px)}}
+.arrow-nudge{display:inline-block;animation:nudge 2.4s ease-in-out infinite}
+@keyframes aurora{0%,100%{transform:translate3d(-8%,0,0) scale(1)}50%{transform:translate3d(8%,-6%,0) scale(1.15)}}
+.aurora{animation:aurora 18s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.arrow-nudge,.aurora{animation:none}html{scroll-behavior:auto}}
